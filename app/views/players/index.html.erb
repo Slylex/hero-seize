@@ -1,0 +1,16 @@
+<h1>hello</h1>
+
+<p>I'm the coder, i code</p>
+
+
+<ul>
+  <% @players.each do |player| %>
+    <li><%= player.name  %></li>
+  <% end %>
+</ul>
+
+
+
+<p>Now is <%= Time.now %></p>
+
+<%= link_to "FINISH", player_path(player) %>
