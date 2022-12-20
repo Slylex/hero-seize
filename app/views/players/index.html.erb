@@ -1,16 +1,15 @@
-<h1>hello</h1>
+<h1>Players List</h1>
 
 <p>I'm the coder, i code</p>
 
 
 <ul>
   <% @players.each do |player| %>
-    <li><%= player.name  %></li>
+    <li><%= link_to player.name, player_path(player)%></li>
   <% end %>
 </ul>
 
+  <%= link_to "Add a new Player", new_player_path, class: 'btn btn-primary' %>
 
 
 <p>Now is <%= Time.now %></p>
-
-<%= link_to "FINISH", player_path(player) %>
