@@ -1,3 +1,8 @@
 
 
  <h1>Create a new Player</h1>
+<%= simple_form_for @player do |f| %>
+  <%= f.input :name %>
+  <%= f.input :level %>
+  <%= f.submit %>
+<% end %>

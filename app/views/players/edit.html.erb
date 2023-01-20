@@ -1,0 +1,7 @@
+<h1>Edit the player</h1>
+
+<%= simple_form_for(player) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :level %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
