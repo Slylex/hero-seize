@@ -1,32 +1,45 @@
 
 <%# NAVBAR -------------------------------------------------- %>
 <div class="navbar-corps">
-  <div class="logo-container">
-      <img src="app/assets/images/DALL·E 2023-01-14 20.13.30.png" alt="">
-  </div>
+
+  <%= link_to "Poulpe", "#", class: "btn-navbar" %>
+  <%= link_to "Poulpe", "#", class: "btn-navbar" %>
+  <%= link_to "Poulpe", "#", class: "btn-navbar" %>
+
+
 </div>
 
   <%# <div class="bloc">
     <video autoplay="autoplay" muted="" loop="infinite" src="app/assets/images/The Brink of Infinity _ Season 2023 Cinematic - League of Legends (ft. Mia Sinclair Jenness, 2WEI).mp4"></video>
   </div> %>
+<div class="global-content">
+  <div class="side-bar">
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+    <div class="btn-side-bar"></div>
+
+  </div>
+    <div class="container">
+    <%# NAVBAR -------------------------------------------------- %>
+      <h1>Alex's GG</h1>
+        <p>Enter your summoner's tag</p>
+          <input type="text" autocomplete="off" placeholder="Search Yourself or a Champion" value="" class="search-bar">
+        <ul>
+          <% @players.each do |player| %>
+            <li><%= link_to player.name, player_path(player)%></li>
+            <%= link_to "Edit", edit_player_path(player), class: "ms-3 text-warning" %>
+            <%= link_to "Remove", player_path(player) %>
+          <% end %>
+        </ul>
+
+      <%= link_to "Add a new Player", new_player_path, class: 'btn btn-primary' %>
 
 
-<div class="container">
-<%# NAVBAR -------------------------------------------------- %>
-  <h1>Alex's GG</h1>
-    <p>Enter your summoner's tag</p>
-      <input type="text" autocomplete="off" placeholder="Search Yourself or a Champion" value="" class="search-bar">
-    <ul>
-      <% @players.each do |player| %>
-        <li><%= link_to player.name, player_path(player)%></li>
-        <%= link_to "Edit", edit_player_path(player), class: "ms-3 text-warning" %>
-        <%= link_to "Remove", player_path(player) %>
-      <% end %>
-    </ul>
+      <p>Now is <%= Time.now %></p>
 
-  <%= link_to "Add a new Player", new_player_path, class: 'btn btn-primary' %>
-
-
-  <p>Now is <%= Time.now %></p>
-
+    </div>
 </div>
